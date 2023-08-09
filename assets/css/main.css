@@ -45,7 +45,6 @@ main.blogfeed * {
 
 header {
   display: inline-block;
-  padding: 2rem 0 4rem 0;
 }
 header .site-title {
   font-size: 5rem;
@@ -55,7 +54,8 @@ header .site-title {
 }
 header #header-img {
   display: inline;
-  width: 5rem;
+  border-radius: 100%;
+  vertical-align: middle;
 }
 
 #social-links {
