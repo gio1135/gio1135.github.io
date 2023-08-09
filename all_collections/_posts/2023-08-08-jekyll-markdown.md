@@ -8,7 +8,7 @@ thumbnail: "assets/images/thumb1.png"
 
 Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`
 
-[Link to another page](./another-page.html).
+[Link to another page](/assets/css/main.css).
 
 There should be whitespace between paragraphs.
 
