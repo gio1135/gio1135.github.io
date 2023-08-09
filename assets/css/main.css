@@ -3,9 +3,9 @@
 :root {
   /* Themes */
   --text-dm-site-title: #81d7b3;
-  --text-dm-primary: #000;
-  --text-dm-secondary: #81d7b3;
-  --dm-contrast: #000;
+  --text-dm-primary: #81d7b3;
+  --text-dm-secondary: #000;
+  --dm-contrast: #d7bbf3;
   --bg-dm-primary: #fffbff;
   --bg-dm-secondary: #d7bbf3;
   /* Other vars */
