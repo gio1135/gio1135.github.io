@@ -55,6 +55,7 @@ header .site-title {
 }
 header #header-img {
   display: inline;
+  width: 5rem;
 }
 
 #social-links {
