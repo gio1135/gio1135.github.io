@@ -5,7 +5,7 @@
   --text-dm-site-title: #81d7b3;
   --text-dm-primary: #81d7b3;
   --text-dm-secondary: #000;
-  --dm-contrast: #d7bbf3;
+  --dm-contrast: #81d7b3;
   --bg-dm-primary: #fff;
   --bg-dm-secondary: #fffbff;
   /* Other vars */
@@ -129,7 +129,7 @@ header .site-title {
   height: auto;
   margin: -2rem -2.5rem;
   inset: 0;
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  border-radius: var(--border-radius);
   margin-bottom: 0.2rem;
   display: flex;
   justify-content: flex-start;
