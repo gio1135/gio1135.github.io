@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   {% include head.html %}
   <body>
@@ -14,12 +14,7 @@
         {% assign page_thumbnail = '/assets/images/pattern.png' %}
         <!--  -->
         {% endif %}
-        <div
-          class="article-thumbnail"
-          style="
-            background-image: url('{{ site.baseurl }}/{{ page_thumbnail }}');
-          "
-        >
+        <div class="article-thumbnail" style="background-image: url('{{ site.baseurl }}/{{ page_thumbnail }}');">
           <h1 class="article-title">{{ page.title }}</h1>
           <div class="article-bottom">
             <small class="article-date">{{page.date | date_to_string}}</small>
