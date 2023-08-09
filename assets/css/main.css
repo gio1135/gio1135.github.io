@@ -46,15 +46,14 @@ main.blogfeed * {
 header {
   padding: 2rem 0 4rem 0;
 }
-header #header-img {
-  display: inline;
-  line-height: 5rem;
-}
 header .site-title {
   font-size: 5rem;
   font-weight: bolder;
   line-height: 110%;
   color: var(--text-dm-site-title);
+}
+header #header-img {
+  display: inline;
 }
 
 #social-links {
