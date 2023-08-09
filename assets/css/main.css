@@ -2,12 +2,12 @@
 
 :root {
   /* Themes */
-  --text-dm-site-title: #e3badb; /*#ffa4a4;*/
-  --text-dm-primary: #e3badb; /*#ffa4a4;*/
-  --text-dm-secondary: #9df4ce; /*#d4adad;*/
+  --text-dm-site-title: #81d7b3;
+  --text-dm-primary: #81d7b3;
+  --text-dm-secondary: #81d7b3;
   --dm-contrast: #81d7b3;
-  --bg-dm-primary: #f6eef9; /*#130202;*/
-  --bg-dm-secondary: #ffebf8; /*#1C0B0B;*/
+  --bg-dm-primary: #fffbff;
+  --bg-dm-secondary: #d7bbf3;
   /* Other vars */
   --border-radius: 2rem;
 }
