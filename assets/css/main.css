@@ -6,8 +6,8 @@
   --text-dm-primary: #81d7b3;
   --text-dm-secondary: #000;
   --dm-contrast: #d7bbf3;
-  --bg-dm-primary: #fffbff;
-  --bg-dm-secondary: #d7bbf3;
+  --bg-dm-primary: #fff;
+  --bg-dm-secondary: #fffbff;
   /* Other vars */
   --border-radius: 2rem;
 }
