@@ -39,7 +39,6 @@ main {
   max-width: 650px;
   padding: 3rem 0;
 }
-
 main.blogfeed * {
   font-weight: 900;
 }
@@ -49,33 +48,13 @@ header {
 }
 header #header-img {
   display: inline;
+  line-height: 5rem;
 }
 header .site-title {
   font-size: 5rem;
   font-weight: bolder;
   line-height: 110%;
   color: var(--text-dm-site-title);
-}
-
-#bio {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 3rem;
-}
-/* #bio-avatar-wrapper {} */
-#bio-avatar {
-  width: 180px;
-  border-radius: 50%;
-}
-/* #bio-text-and-social-links {} */
-#bio-text {
-  line-height: 140%;
-}
-
-#bio-text a {
-  color: var(--dm-contrast);
-  border-bottom: 3px solid var(--dm-contrast);
 }
 
 #social-links {
