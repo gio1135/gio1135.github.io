@@ -55,6 +55,7 @@ header .site-title {
 header #header-img {
   display: inline;
   border-radius: 100%;
+  width: 5rem;
   vertical-align: middle;
 }
 
