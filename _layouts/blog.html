@@ -2,8 +2,8 @@
 <html lang="en">
   {% include head.html %}
   <body>
+    {% include header.html %}
     <main class="blogfeed">
-      {% include header.html %}
       <section id="articles">
         {% for post in site.posts %}
         <!--  -->
@@ -51,8 +51,8 @@
       </section>
       {% endfor %}
       <!--  -->
-      {% include footer.html %}
     </main>
+    {% include footer.html %}
     {% include category-modal.html%}
   </body>
 </html>

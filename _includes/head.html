@@ -1,18 +1,27 @@
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{site.title}} | {{page.title}}</title>
-  {% if page.layout == "post" %}
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css" />
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/post.css" />
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/syntax.css" />
+  <meta charset='UTF-8' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>{{page.title}}</title>
+  <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png'>
+  <link rel='icon' type='image/png' sizes='32x32' href='/assets/favicon_package_v0.16/favicon-32x32.png'>
+  <link rel='icon' type='image/png' sizes='16x16' href='/assets/favicon_package_v0.16/favicon-16x16.png'>
+  <link rel='manifest' href='/assets/favicon_package_v0.16/site.webmanifest'>
+  <link rel='mask-icon' href='/assets/favicon_package_v0.16/safari-pinned-tab.svg' color='#5bbad5'>
+  <meta name='apple-mobile-web-app-title' content='gio1135'>
+  <meta name='application-name' content='gio1135'>
+  <meta name='msapplication-TileColor' content='#ffffff'>
+  <meta name='theme-color' content='#ffffff'>
+  {% if page.layout == 'post' %}
+  <link rel='stylesheet' href='{{site.baseurl}}/assets/css/main.css' />
+  <link rel='stylesheet' href='{{site.baseurl}}/assets/css/post.css' />
+  <link rel='stylesheet' href='{{site.baseurl}}/assets/css/syntax.css' />
   {% else %}
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css" />
+  <link rel='stylesheet' href='{{site.baseurl}}/assets/css/main.css' />
   {% endif %}
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/common.css" />
-  <script src="{{site.baseurl}}/assets/js/categories.js"></script>
-  {% if page.layout == "post" %}
-  <script defer src="{{site.baseurl}}/assets/js/lbox.js"></script>
+  <link rel='stylesheet' href='{{site.baseurl}}/assets/css/common.css' />
+  <script src='{{site.baseurl}}/assets/js/categories.js'></script>
+  {% if page.layout == 'post' %}
+  <script defer src='{{site.baseurl}}/assets/js/lbox.js'></script>
   {% endif %}
 </head>

@@ -1,15 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans");
 
 :root {
-  /* Themes */
-  --text-dm-site-title: #e3badb;
-  --text-dm-primary: #81d7b3;
-  --text-dm-secondary: #000;
-  --dm-contrast: #81d7b3;
-  --bg-dm-primary: #fff;
-  --bg-dm-secondary: #f7edff;
-  /* Other vars */
-  --border-radius: 2rem;
+  /* themes */
+  --primary: #6750a4;
+  --on-primary: #fff;
+  --primary-container: #eaddff;
+  --on-primary-container: #21005d;
+
+  --secondary: #625b71;
+  --on-secondary: #fff;
+  --secondary-container: #e8def8;
+  --on-secondary-container: #1d192b;
+
+  --tertiary: #7D5260;
+  --on-tertiary: #fff;
+  --tertiary-container: #ffd8e4;
+  --on-tertiary-container: #31111d;
+
+  --error: #b3261e;
+  --on-error: #fff;
+  --error-container: #f9dedc;
+  --on-error-container: #410e0B;
+
+  --background: #fffbfe;
+  --on-background: #1c1b1f;
+  --surface: #fffbfe;
+  --on-surface: #1c1b1f;
+
+  --outline: #79747e;
+  --surface-variant: #e7e0ec;
+  --on-surface-variant: #49454f;
+
+  /* other vars */
+  --border-radius: 24px;
 }
 
 * {
@@ -23,65 +46,56 @@
 }
 
 * img {
+  box-sizing: border-box;
   max-width: 100%;
 }
-
 html,
 body {
-  color: var(--text-dm-secondary);
-  background-color: var(--bg-dm-primary);
-  font-family: "Google Sans", sans-serif;
+  color: var(--on-background);
+  background-color: var(--background);
+  font-family: sans-serif;
   line-height: 2rem;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Google Sans', sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1240px;
+  height: 72px;
+  margin: 0 auto;
+}
+header div {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  margin-right: auto;
+  padding-left: 24px;
+}
+header a img {
+  vertical-align: middle;
+  margin-right: 16px;
+  border-radius: 50%;
+  height: 24px;
+}
+header .site-title {
+  display: inline;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--on-background);
 }
 
 main {
   margin: 0 auto;
-  max-width: 650px;
-  padding: 3rem 0;
+  max-width: 1240px;
 }
 main.blogfeed * {
   font-weight: 900;
-}
-
-header {
-  display: inline-block;
-  padding: 2rem 0 4rem 0;
-}
-header .site-title {
-  font-size: 3rem;
-  font-weight: bolder;
-  line-height: 110%;
-  color: var(--text-dm-site-title);
-}
-header #header-img {
-  display: inline;
-  margin-right: 2rem;
-  border-radius: 50%;
-  width: 4rem;
-  vertical-align: middle;
-}
-
-#social-links {
-  margin: 2rem 0 3rem 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1rem;
-}
-
-#social-links a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem;
-  border-radius: var(--border-radius);
-  color: var(--bg-dm-secondary);
-  background-color: var(--dm-contrast);
-}
-
-#social-links a img {
-  width: 20px;
-  border-radius: 50%;
 }
 
 /* article list styles */
@@ -93,9 +107,8 @@ header #header-img {
   row-gap: 3rem;
   margin-bottom: 3rem;
 }
-
 .article {
-  background-color: var(--bg-dm-secondary);
+  background-color: var(--primary-container);
   padding: 2rem 2.5rem;
   border-radius: var(--border-radius);
   display: flex;
@@ -103,7 +116,6 @@ header #header-img {
   justify-content: space-between;
   position: relative;
 }
-
 .article-thumbnail {
   background-position: center;
   background-repeat: no-repeat;
@@ -121,32 +133,27 @@ header #header-img {
   align-items: flex-end;
   padding: 0 2.5rem 1rem 2.5rem;
 }
-
 .article-title * {
-  color: inherit;
+  color: var(--on-primary);
   font-size: 2rem;
   line-height: 120%;
 }
-
 .article-bottom {
   margin-top: 1.5rem;
 }
-
 .article-date {
-  color: var(--dm-contrast);
+  color: var(--on-primary-container);
 }
-
 .article-categories {
   margin-top: 0.2rem;
   display: flex;
   gap: 1rem;
 }
-
 .article-category {
   padding: 0.4rem 0.8rem;
   border-radius: var(--border-radius);
-  color: var(--bg-dm-secondary);
-  background-color: var(--dm-contrast);
+  background-color: var(--primary);
+  color: var(--on-primary);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,10 +162,10 @@ header #header-img {
 
 /* footer */
 footer {
-  background: var(--dm-contrast);
+  background: var(--tertiary-container);
   margin: 10rem 0 -3rem 0;
   padding: 2rem 2.5rem;
   border-radius: var(--border-radius) var(--border-radius) 0 0;
   font-size: 1.2rem;
-  color: var(--bg-dm-secondary);
+  color: var(--on-tertiary-container);
 }
