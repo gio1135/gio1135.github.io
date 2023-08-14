@@ -1,42 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Google+Sans");
-
-:root {
-  /* themes */
-  --primary: #6750a4;
-  --on-primary: #fff;
-  --primary-container: #eaddff;
-  --on-primary-container: #21005d;
-
-  --secondary: #625b71;
-  --on-secondary: #fff;
-  --secondary-container: #e8def8;
-  --on-secondary-container: #1d192b;
-
-  --tertiary: #7D5260;
-  --on-tertiary: #fff;
-  --tertiary-container: #ffd8e4;
-  --on-tertiary-container: #31111d;
-
-  --error: #b3261e;
-  --on-error: #fff;
-  --error-container: #f9dedc;
-  --on-error-container: #410e0B;
-
-  --background: #fffbfe;
-  --on-background: #1c1b1f;
-  --surface: #fffbfe;
-  --on-surface: #1c1b1f;
-
-  --outline: #79747e;
-  --surface-variant: #e7e0ec;
-  --on-surface-variant: #49454f;
-
-  /* other vars */
-  --border-radius: 24px;
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
 }
-
 * {
-  font-family: inherit;
+  box-sizing: border-box;
   text-decoration: none;
   margin: 0;
   padding: 0;
@@ -44,20 +15,25 @@
   -moz-window-dragging: none;
   -webkit-tap-highlight-color: transparent;
 }
-
 * img {
   box-sizing: border-box;
   max-width: 100%;
 }
-html,
-body {
+html, body {
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 100%;
+  font: inherit;
+  font-size: 100%;
+  font-family: var(--text-font-family);
   color: var(--on-background);
   background-color: var(--background);
-  font-family: sans-serif;
-  line-height: 2rem;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Google Sans', sans-serif;
+  font-weight: var(--title-font-weight);
+  font-family: var(--display-font-family);
 }
 
 header {
@@ -83,9 +59,9 @@ header a img {
 }
 header .site-title {
   display: inline;
-  font-family: 'Google Sans', sans-serif;
+  font-family: var(--display-font-family);
   font-size: 16px;
-  font-weight: 500;
+  font-weight: var(--title-font-weight);
   line-height: 24px;
   color: var(--on-background);
 }
@@ -94,62 +70,68 @@ main {
   margin: 0 auto;
   max-width: 1240px;
 }
-main.blogfeed * {
-  font-weight: 900;
-}
 
-/* article list styles */
+/* card grid */
 
-#articles {
+#card-set {
+  margin-bottom: 80px;
+  padding-top: 8px;
   display: grid;
-  grid-template-columns: none;
-  grid-template-rows: 1fr;
-  row-gap: 3rem;
-  margin-bottom: 3rem;
+  grid-gap: 8px;
+  gap: 8px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-flow: row;
+  grid-auto-rows: minmax(320px, auto);
 }
-.article {
-  background-color: var(--primary-container);
-  padding: 2rem 2.5rem;
-  border-radius: var(--border-radius);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
+.card {
+  grid-column: span 2;
+  vertical-align: middle;
 }
-.article-thumbnail {
-  background-position: center;
+.card a {
+  justify-content: start;
+  flex-direction: column-reverse;
   background-repeat: no-repeat;
+  background-position: 50% 50%;
   background-size: cover;
-  box-shadow: inset 0 -80px 90px 11px rgba(0, 0, 0, 0.8);
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  min-height: 200px;
-  height: auto;
-  margin: -2rem -2.5rem;
-  inset: 0;
-  border-radius: var(--border-radius);
-  margin-bottom: 0.2rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  padding: 0 2.5rem 1rem 2.5rem;
-}
-.article-title * {
-  color: var(--on-primary);
-  font-size: 2rem;
-  line-height: 120%;
-}
-.article-bottom {
-  margin-top: 1.5rem;
-}
-.article-date {
+  height: 100%;
+  padding: 0;
+  transition: border-radius .3s cubic-bezier(.2, 0, 0, 1), background-color .3s cubic-bezier(.2, 0, 0, 1);
+  border-radius: 24px;
+  background: var(--primary-container);
   color: var(--on-primary-container);
+  text-decoration: none;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  font-variation-settings: 'GRAD' 0;
 }
-.article-categories {
+.card-content {
+  display: grid;
+  position: relative;
+  align-self: start;
+  margin: 24px;
+  grid-gap: 8px;
+  gap: 8px;
+}
+.card-title {
+  font-family: var(--display-font-family);
+  font-size: var(--headline-s-font-size);
+  line-height: var(--headline-s-line-height);
+}
+.card-date {
+  font-family: var(--text-font-family);
+  max-width: 640px;
+}
+.card-categories {
   margin-top: 0.2rem;
   display: flex;
   gap: 1rem;
 }
-.article-category {
+.card-category {
   padding: 0.4rem 0.8rem;
   border-radius: var(--border-radius);
   background-color: var(--primary);

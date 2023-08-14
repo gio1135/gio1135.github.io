@@ -26,22 +26,19 @@
   margin-top: 3rem;
 }
 
-#article .article-content * {
-  font-weight: 400;
-}
-
 /* markdown content */
 
 .article-content * {
   line-height: 180%;
 }
-.article-content p {
+#article .article-content p {
   margin: 0 0 1.75rem 0;
   padding: 0;
 }
 .article-content a {
-  color: var(--on-background);
-  border-bottom: 3px solid var(--on-background);
+  color: var(--primary);
+  font-weight: var(--title-font-weight);
+  text-decoration: underline;
 }
 .article-content h1 {
   font-size: 2rem;
@@ -123,7 +120,7 @@
 }
 
 .article-content pre {
-  background: var(--text-dm-secondary) !important;
+  background: var(--on-background) !important;
   padding: 1rem 2rem;
   margin-bottom: 1.75rem;
 }

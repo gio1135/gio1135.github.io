@@ -1,51 +1,43 @@
 <!doctype html>
-<html lang="en">
+<html lang='en'>
   {% include head.html %}
   <body>
     {% include header.html %}
-    <main class="blogfeed">
-      <section id="articles">
+    <main class='blogfeed'>
+      <section id='card-set'>
         {% for post in site.posts %}
         <!--  -->
         {% if post.thumbnail %}
-        <article class="article">
-          <div class="article-top">
-            <div class="article-thumbnail" style="background-image: url('{{ post.thumbnail }}');">
-              <div class="article-title">
-                <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+        <article class='card'>
+          <a href='{{site.baseurl}}{{post.url}}'>
+            <div class='card-content'>
+              <span class='card-title'>{{post.title}}</span>
+              <span class='card-date'>{{post.date | date_to_string}}</span>
+              <div class='card-categories'>
+                <div class='card-categories'>
+                  {% for c in post.categories %}
+                  <h1>
+                    <a href='#!' data-base-url='{{site.baseurl}}' class='card-category'>{{c}}</a>
+                  </h1>
+                  {% endfor %}
+                </div>
               </div>
             </div>
-          </div>
-          <div class="article-bottom">
-            <small class="article-date">{{post.date | date_to_string}}</small>
-            <div class="article-categories">
-              <div class="article-categories">
-                {% for c in post.categories %}
-                <h1>
-                  <a href="#!" data-base-url="{{site.baseurl}}" class="article-category">{{c}}</a>
-                </h1>
-                {% endfor %}
-              </div>
-            </div>
-          </div>
+          </a>
         </article>
         {% else %}
-        <article class="article">
-          <h2 class="article-top">
-            <div class="article-title">
-              <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
-            </div>
-          </h2>
-          <div class="article-bottom">
-            <small class="article-date">{{post.date | date_to_string}}</small>
-            <div class="article-categories">
-              <div class="article-categories">
+        <article class='card'>
+          <a href='{{site.baseurl}}{{post.url}}'>
+            <span class='card-title'>{{post.title}}</span>
+            <small class='card-date'>{{post.date | date_to_string}}</small>
+            <div class='card-categories'>
+              <div class='card-categories'>
                 {% for c in post.categories %}
-                <a href="#!" data-base-url="{{site.baseurl}}" class="article-category">{{c}}</a>
+                <a href='#!' data-base-url='{{site.baseurl}}' class='card-category'>{{c}}</a>
                 {% endfor %}
               </div>
             </div>
-          </div>
+          </a>
         </article>
         {% endif %}
       </section>

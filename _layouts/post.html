@@ -2,8 +2,8 @@
 <html lang="en">
   {% include head.html %}
   <body>
+    {% include header.html %}
     <main class="blogfeed">
-      {% include header.html %}
       <section id="article">
         {% if page.thumbnail %}
         <!--  -->
@@ -27,8 +27,8 @@
         </div>
         <div class="article-content">{{content}}</div>
       </section>
-      {% include footer.html %}
     </main>
+    {% include footer.html %}
     {% include category-modal.html%}
   </body>
 </html>

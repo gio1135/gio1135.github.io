@@ -1,0 +1,43 @@
+:root {
+  /* colors */
+  --primary: #6750a4;
+  --on-primary: #fff;
+  --primary-container: #eaddff;
+  --on-primary-container: #21005d;
+
+  --secondary: #625b71;
+  --on-secondary: #fff;
+  --secondary-container: #e8def8;
+  --on-secondary-container: #1d192b;
+
+  --tertiary: #7D5260;
+  --on-tertiary: #fff;
+  --tertiary-container: #ffd8e4;
+  --on-tertiary-container: #31111d;
+
+  --error: #b3261e;
+  --on-error: #fff;
+  --error-container: #f9dedc;
+  --on-error-container: #410e0B;
+
+  --background: #fffbfe;
+  --on-background: #1c1b1f;
+  --surface: #fffbfe;
+  --on-surface: #1c1b1f;
+
+  --outline: #79747e;
+  --surface-variant: #e7e0ec;
+  --on-surface-variant: #49454f;
+
+  /* text vars */
+  --display-font-family: 'Google Sans', sans-serif;
+  --text-font-family: 'Google Sans Text', sans-serif;
+  --mono-font-family: 'Google Sans Mono';
+  --title-font-weight: 600;
+  --headline-s-font-size: 32px;
+  --headline-s-line-height: 32px;
+
+  /* layout vars */
+  --border-radius: 24px;
+  --border-radius-active: 48px;
+}
