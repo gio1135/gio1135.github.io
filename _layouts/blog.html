@@ -8,37 +8,23 @@
         {% for post in site.posts %}
         <!--  -->
         {% if post.thumbnail %}
-        <article class='card'>
+        <div class='card'>
           <a href='{{site.baseurl}}{{post.url}}'>
+            <img src='{{site.baseurl}}{{post.thumbnail}}' class='card-thumbnail' />
             <div class='card-content'>
               <span class='card-title'>{{post.title}}</span>
               <span class='card-date'>{{post.date | date_to_string}}</span>
-              <div class='card-categories'>
-                <div class='card-categories'>
-                  {% for c in post.categories %}
-                  <h1>
-                    <a href='#!' data-base-url='{{site.baseurl}}' class='card-category'>{{c}}</a>
-                  </h1>
-                  {% endfor %}
-                </div>
-              </div>
             </div>
           </a>
-        </article>
+        </div>
         {% else %}
-        <article class='card'>
+        <div class='card'>
           <a href='{{site.baseurl}}{{post.url}}'>
+            <div class='card-thumbnail'></div>
             <span class='card-title'>{{post.title}}</span>
-            <small class='card-date'>{{post.date | date_to_string}}</small>
-            <div class='card-categories'>
-              <div class='card-categories'>
-                {% for c in post.categories %}
-                <a href='#!' data-base-url='{{site.baseurl}}' class='card-category'>{{c}}</a>
-                {% endfor %}
-              </div>
-            </div>
+            <span class='card-date'>{{post.date | date_to_string}}</span>
           </a>
-        </article>
+        </div>
         {% endif %}
       </section>
       {% endfor %}
