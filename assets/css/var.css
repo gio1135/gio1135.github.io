@@ -1,5 +1,5 @@
 :root {
-  /* colors */
+  /* color */
   --primary: #6750a4;
   --on-primary: #fff;
   --primary-container: #eaddff;
@@ -10,15 +10,15 @@
   --secondary-container: #e8def8;
   --on-secondary-container: #1d192b;
 
-  --tertiary: #7D5260;
+  --tertiary: #7d5260;
   --on-tertiary: #fff;
   --tertiary-container: #ffd8e4;
   --on-tertiary-container: #31111d;
 
   --error: #b3261e;
   --on-error: #fff;
-  --error-container: #f9dedc;
-  --on-error-container: #410e0B;
+  --error-container: #ffd8e4;
+  --on-error-container: #410e0b;
 
   --background: #fffbfe;
   --on-background: #1c1b1f;
@@ -29,15 +29,8 @@
   --surface-variant: #e7e0ec;
   --on-surface-variant: #49454f;
 
-  /* text vars */
-  --display-font-family: 'Google Sans', sans-serif;
-  --text-font-family: 'Google Sans Text', sans-serif;
-  --mono-font-family: 'Google Sans Mono';
-  --title-font-weight: 600;
-  --headline-s-font-size: 32px;
-  --headline-s-line-height: 32px;
-
-  /* layout vars */
-  --border-radius: 24px;
-  --border-radius-active: 48px;
+  /* typography */
+  --display-font: 'Google Sans', sans-serif;
+  --regular-font: 'Google Sans Text', sans-serif;
+  --mono-font: 'Google Sans Mono', mono;
 }

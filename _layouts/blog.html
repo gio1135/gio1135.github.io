@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang='en'>
+<html lang='en-US'>
   {% include head.html %}
   <body>
     {% include header.html %}
-    <main class='blogfeed'>
+    <main>
       <section id='card-set'>
         {% for post in site.posts %}
         <!--  -->
@@ -28,9 +28,7 @@
         {% endif %}
       </section>
       {% endfor %}
-      <!--  -->
+      {% include footer.html %}
     </main>
-    {% include footer.html %}
-    {% include category-modal.html%}
   </body>
 </html>

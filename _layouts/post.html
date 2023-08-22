@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang='en-US'>
   {% include head.html %}
   <body>
     {% include header.html %}
-    <main class="blogfeed">
-      <section id="article">
+    <main class='blogfeed'>
+      <section id='article'>
         {% if page.thumbnail %}
         <!--  -->
         {% assign page_thumbnail = page.thumbnail %}
@@ -14,21 +14,20 @@
         {% assign page_thumbnail = '/assets/images/pattern.png' %}
         <!--  -->
         {% endif %}
-        <div class="article-thumbnail" style="background-image: url('{{ site.baseurl }}/{{ page_thumbnail }}');">
-          <h1 class="article-title">{{ page.title }}</h1>
-          <div class="article-bottom">
-            <small class="article-date">{{page.date | date_to_string}}</small>
-            <div class="article-categories">
+        <div class='article-thumbnail' style="background-image: url('{{ site.baseurl }}/{{ page_thumbnail }}');">
+          <h1 class='article-title'>{{ page.title }}</h1>
+          <div class='article-bottom'>
+            <small class='article-date'>{{page.date | date_to_string}}</small>
+            <div class='article-categories'>
               {% for c in page.categories %}
-              <a href="#!" class="article-category">{{c}}</a>
+              <a href='#!' class='article-category'>{{c}}</a>
               {% endfor %}
             </div>
           </div>
         </div>
-        <div class="article-content">{{content}}</div>
+        <div class='article-content'>{{content}}</div>
       </section>
     </main>
     {% include footer.html %}
-    {% include category-modal.html%}
   </body>
 </html>
