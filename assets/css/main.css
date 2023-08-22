@@ -1,15 +1,8 @@
-*, *:before, *:after {
-  font-family: var(--regular-font);
-}
-body {
-  background-color: var(--background);
-}
 /* navigation rail */
 header {
   position: fixed;
   height: 100%;
   width: 80px;
-  background: var(--surface);
 }
 header div {
   display: flex;
@@ -21,7 +14,6 @@ header div a {
   margin: -2px auto 14px;
   padding: 2px;
   width: 80px;
-  color: var(--on-surface);
   text-decoration: none;
 }
 header div a img {
@@ -39,7 +31,6 @@ header div a span {
   margin-bottom: 4px;
   width: 80px;
   text-align: center;
-  font: var(--display-font);
 }
 
 /* blog layout */
@@ -64,7 +55,6 @@ main {
   vertical-align: middle;
   justify-content: start;
   border-radius: 24px;
-  background-color: var(--primary-container);
 }
 .card a {
   text-decoration: none;
@@ -74,13 +64,8 @@ main {
   width: 100%;
 }
 .card-content {
-  color: var(--on-primary-container);
+  padding: 16px;
 }
 .card-title {
   display: block;
-  font-size: 24px;
-  font-family: var(--display-font);
-}
-.card-date {
-  font-family: var(--regular-font);
 }

@@ -15,17 +15,12 @@
         <!--  -->
         {% endif %}
         <div class='article-thumbnail' style="background-image: url('{{ site.baseurl }}/{{ page_thumbnail }}');">
-          <h1 class='article-title'>{{ page.title }}</h1>
+          <h1 class='article-title title-large background-text'>{{ page.title }}</h1>
           <div class='article-bottom'>
-            <small class='article-date'>{{page.date | date_to_string}}</small>
-            <div class='article-categories'>
-              {% for c in page.categories %}
-              <a href='#!' class='article-category'>{{c}}</a>
-              {% endfor %}
-            </div>
+            <small class='article-date title-small background-text'>{{page.date | date_to_string}}</small>
           </div>
         </div>
-        <div class='article-content'>{{content}}</div>
+        <div class='article-content body-medium'>{{content}}</div>
       </section>
     </main>
     {% include footer.html %}

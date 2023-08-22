@@ -3,23 +3,16 @@
   width: inherit;
   position: relative;
   padding: 2rem;
-  border-radius: var(--border-radius);
+  border-radius: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-}
-
-#article .article-thumbnail .article-title {
-  font-size: 2rem !important;
-  color: var(--on-primary);
-  text-shadow: 0px 0px 3px var(--on-primary-container);
-  line-height: 120%;
+  background-size: cover;
 }
 
 #article .article-date {
   padding: 4px 15px;
-  color: var(--on-primary);
 }
 
 #article .article-content {

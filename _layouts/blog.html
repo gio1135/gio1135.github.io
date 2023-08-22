@@ -1,28 +1,28 @@
 <!doctype html>
 <html lang='en-US'>
   {% include head.html %}
-  <body>
+  <body class='background'>
     {% include header.html %}
     <main>
       <section id='card-set'>
         {% for post in site.posts %}
         <!--  -->
         {% if post.thumbnail %}
-        <div class='card'>
+        <div class='card surface-container-low'>
           <a href='{{site.baseurl}}{{post.url}}'>
             <img src='{{site.baseurl}}{{post.thumbnail}}' class='card-thumbnail' />
             <div class='card-content'>
-              <span class='card-title'>{{post.title}}</span>
-              <span class='card-date'>{{post.date | date_to_string}}</span>
+              <span class='card-title headline-small on-surface-text'>{{post.title}}</span>
+              <span class='card-date body-large on-surface-text'>{{post.date | date_to_string}}</span>
             </div>
           </a>
         </div>
         {% else %}
-        <div class='card'>
+        <div class='card surface-container-low'>
           <a href='{{site.baseurl}}{{post.url}}'>
             <div class='card-thumbnail'></div>
-            <span class='card-title'>{{post.title}}</span>
-            <span class='card-date'>{{post.date | date_to_string}}</span>
+            <span class='card-title headline-small on-surface-text'>{{post.title}}</span>
+            <span class='card-date body-large on-surface-text'>{{post.date | date_to_string}}</span>
           </a>
         </div>
         {% endif %}
